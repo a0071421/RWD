@@ -1,0 +1,1683 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*{
+  font-family: 	Microsoft JhengHei;
+  box-sizing: border-box;
+}
+
+*:before,*:after{
+  box-sizing: border-box;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+/* pure start */
+
+/*!
+Pure v1.0.1
+Copyright 2013 Yahoo!
+Licensed under the BSD License.
+https://github.com/pure-css/pure/blob/master/LICENSE.md
+*/
+.btn {
+  /* Structure */
+  display: inline-block;
+  zoom: 1;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Firefox: Get rid of the inner focus border */
+.btn::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* Inherit .pure-g styles */
+.btn-group {
+  letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
+  *letter-spacing: normal; /* reset IE < 8 */
+  *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
+  text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
+}
+
+.opera-only :-o-prefocus,
+.btn-group {
+  word-spacing: -0.43em;
+}
+
+.btn-group .btn {
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+}
+
+/*csslint outline-none:false*/
+
+.btn {
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0.5em 1em;
+  color: #444; /* rgba not supported (IE 8) */
+  color: rgba(0, 0, 0, 0.80); /* rgba supported */
+  border: 1px solid #999;  /*IE 6/7/8*/
+  border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
+  background-color: #E6E6E6;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.btn-hover,
+.btn:hover,
+.btn:focus {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(40%, rgba(0,0,0, 0.05)), to(rgba(0,0,0, 0.10)));
+  background-image: -webkit-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+  background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+}
+.btn:focus {
+  outline: 0;
+}
+.btn-active,
+.btn:active {
+  -webkit-box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+          box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+  border-color: #000;
+}
+
+.btn[disabled],
+.btn-disabled,
+.btn-disabled:hover,
+.btn-disabled:focus,
+.btn-disabled:active {
+  border: none;
+  background-image: none;
+  /* csslint ignore:start */
+  filter: alpha(opacity=40);
+  /* csslint ignore:end */
+  opacity: 0.40;
+  cursor: not-allowed;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  pointer-events: none;
+}
+
+.btn-hidden {
+  display: none;
+}
+
+.btn-primary,
+.btn-selected,
+a.btn-primary,
+a.btn-selected {
+  background-color: rgb(0, 120, 231);
+  color: #fff;
+}
+
+
+
+.btn-gray{
+  background: #8f8a8f;
+  color: #fff;
+}
+
+.btn-red{
+  background: #f4601d;
+  color: #fff;
+}
+
+/* Button Groups */
+.btn-group .btn {
+  margin: 0;
+  border-radius: 0;
+  border-right: 1px solid #111;  /* fallback color for rgba() for IE7/8 */
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+
+}
+
+.btn-group .btn:first-child {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+.btn-group .btn:last-child {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-right: none;
+}
+
+
+/*!
+Pure v1.0.1
+Copyright 2013 Yahoo!
+Licensed under the BSD License.
+https://github.com/pure-css/pure/blob/master/LICENSE.md
+*/
+/*csslint box-model:false*/
+/*
+Box-model set to false because we're setting a height on select elements, which
+also have border and padding. This is done because some browsers don't render
+the padding. We explicitly set the box-model for select elements to border-box,
+so we can ignore the csslint warning.
+*/
+
+.pure-form input[type="text"],
+.pure-form input[type="password"],
+.pure-form input[type="email"],
+.pure-form input[type="url"],
+.pure-form input[type="date"],
+.pure-form input[type="month"],
+.pure-form input[type="time"],
+.pure-form input[type="datetime"],
+.pure-form input[type="datetime-local"],
+.pure-form input[type="week"],
+.pure-form input[type="number"],
+.pure-form input[type="search"],
+.pure-form input[type="tel"],
+.pure-form input[type="color"],
+.pure-form select,
+.pure-form textarea {
+    padding: 0.5em 0.6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: inset 0 1px 3px #ddd;
+            box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    vertical-align: middle;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.pure-form input:not([type]) {
+    padding: 0.5em 0.6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: inset 0 1px 3px #ddd;
+            box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+
+/* Chrome (as of v.32/34 on OS X) needs additional room for color to display. */
+/* May be able to remove this tweak as color inputs become more standardized across browsers. */
+.pure-form input[type="color"] {
+    padding: 0.2em 0.5em;
+}
+
+
+.pure-form input[type="text"]:focus,
+.pure-form input[type="password"]:focus,
+.pure-form input[type="email"]:focus,
+.pure-form input[type="url"]:focus,
+.pure-form input[type="date"]:focus,
+.pure-form input[type="month"]:focus,
+.pure-form input[type="time"]:focus,
+.pure-form input[type="datetime"]:focus,
+.pure-form input[type="datetime-local"]:focus,
+.pure-form input[type="week"]:focus,
+.pure-form input[type="number"]:focus,
+.pure-form input[type="search"]:focus,
+.pure-form input[type="tel"]:focus,
+.pure-form input[type="color"]:focus,
+.pure-form select:focus,
+.pure-form textarea:focus {
+    outline: 0;
+    border-color: #129FEA;
+}
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.pure-form input:not([type]):focus {
+    outline: 0;
+    border-color: #129FEA;
+}
+
+.pure-form input[type="file"]:focus,
+.pure-form input[type="radio"]:focus,
+.pure-form input[type="checkbox"]:focus {
+    outline: thin solid #129FEA;
+    outline: 1px auto #129FEA;
+}
+.pure-form .pure-checkbox,
+.pure-form .pure-radio {
+    margin: 0.5em 0;
+    display: block;
+}
+
+.pure-form input[type="text"][disabled],
+.pure-form input[type="password"][disabled],
+.pure-form input[type="email"][disabled],
+.pure-form input[type="url"][disabled],
+.pure-form input[type="date"][disabled],
+.pure-form input[type="month"][disabled],
+.pure-form input[type="time"][disabled],
+.pure-form input[type="datetime"][disabled],
+.pure-form input[type="datetime-local"][disabled],
+.pure-form input[type="week"][disabled],
+.pure-form input[type="number"][disabled],
+.pure-form input[type="search"][disabled],
+.pure-form input[type="tel"][disabled],
+.pure-form input[type="color"][disabled],
+.pure-form select[disabled],
+.pure-form textarea[disabled] {
+    cursor: not-allowed;
+    background-color: #eaeded;
+    color: #cad2d3;
+}
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.pure-form input:not([type])[disabled] {
+    cursor: not-allowed;
+    background-color: #eaeded;
+    color: #cad2d3;
+}
+.pure-form input[readonly],
+.pure-form select[readonly],
+.pure-form textarea[readonly] {
+    background-color: #eee; /* menu hover bg color */
+    color: #777; /* menu text color */
+    border-color: #ccc;
+}
+
+.pure-form input:focus:invalid,
+.pure-form textarea:focus:invalid,
+.pure-form select:focus:invalid {
+    color: #b94a48;
+    border-color: #e9322d;
+}
+.pure-form input[type="file"]:focus:invalid:focus,
+.pure-form input[type="radio"]:focus:invalid:focus,
+.pure-form input[type="checkbox"]:focus:invalid:focus {
+    outline-color: #e9322d;
+}
+.pure-form select {
+    /* Normalizes the height; padding is not sufficient. */
+    height: 2.25em;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+.pure-form select[multiple] {
+    height: auto;
+}
+.pure-form label {
+    margin: 0.5em 0 0.2em;
+}
+.pure-form fieldset {
+    margin: 0;
+    padding: 0.35em 0 0.75em;
+    border: 0;
+}
+.pure-form legend {
+    display: block;
+    width: 100%;
+    padding: 0.3em 0;
+    margin-bottom: 0.3em;
+    color: #333;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.pure-form-stacked input[type="text"],
+.pure-form-stacked input[type="password"],
+.pure-form-stacked input[type="email"],
+.pure-form-stacked input[type="url"],
+.pure-form-stacked input[type="date"],
+.pure-form-stacked input[type="month"],
+.pure-form-stacked input[type="time"],
+.pure-form-stacked input[type="datetime"],
+.pure-form-stacked input[type="datetime-local"],
+.pure-form-stacked input[type="week"],
+.pure-form-stacked input[type="number"],
+.pure-form-stacked input[type="search"],
+.pure-form-stacked input[type="tel"],
+.pure-form-stacked input[type="color"],
+.pure-form-stacked input[type="file"],
+.pure-form-stacked select,
+.pure-form-stacked label,
+.pure-form-stacked textarea {
+    display: block;
+    margin: 0.25em 0;
+}
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.pure-form-stacked input:not([type]) {
+    display: block;
+    margin: 0.25em 0;
+}
+.pure-form-aligned input,
+.pure-form-aligned textarea,
+.pure-form-aligned select,
+/* NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
+.pure-form-aligned .pure-help-inline,
+.pure-form-message-inline {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: middle;
+}
+.pure-form-aligned textarea {
+    vertical-align: top;
+}
+
+/* Aligned Forms */
+.pure-form-aligned .pure-control-group {
+    margin-bottom: 0.5em;
+}
+.pure-form-aligned .pure-control-group label {
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+    width: 10em;
+    margin: 0 1em 0 0;
+}
+.pure-form-aligned .pure-controls {
+    margin: 1.5em 0 0 11em;
+}
+
+/* Rounded Inputs */
+.pure-form input.pure-input-rounded,
+.pure-form .pure-input-rounded {
+    border-radius: 2em;
+    padding: 0.5em 1em;
+}
+
+/* Grouped Inputs */
+.pure-form .pure-group fieldset {
+    margin-bottom: 10px;
+}
+.pure-form .pure-group input,
+.pure-form .pure-group textarea {
+    display: block;
+    padding: 10px;
+    margin: 0 0 -1px;
+    border-radius: 0;
+    position: relative;
+    top: -1px;
+}
+.pure-form .pure-group input:focus,
+.pure-form .pure-group textarea:focus {
+    z-index: 3;
+}
+.pure-form .pure-group input:first-child,
+.pure-form .pure-group textarea:first-child {
+    top: 1px;
+    border-radius: 4px 4px 0 0;
+    margin: 0;
+}
+.pure-form .pure-group input:first-child:last-child,
+.pure-form .pure-group textarea:first-child:last-child {
+    top: 1px;
+    border-radius: 4px;
+    margin: 0;
+}
+.pure-form .pure-group input:last-child,
+.pure-form .pure-group textarea:last-child {
+    top: -2px;
+    border-radius: 0 0 4px 4px;
+    margin: 0;
+}
+.pure-form .pure-group button {
+    margin: 0.35em 0;
+}
+
+.pure-form .pure-input-1 {
+    width: 100%;
+}
+.pure-form .pure-input-3-4 {
+    width: 75%;
+}
+.pure-form .pure-input-2-3 {
+    width: 66%;
+}
+.pure-form .pure-input-1-2 {
+    width: 50%;
+}
+.pure-form .pure-input-1-3 {
+    width: 33%;
+}
+.pure-form .pure-input-1-4 {
+    width: 25%;
+}
+
+/* Inline help for forms */
+/* NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
+.pure-form .pure-help-inline,
+.pure-form-message-inline {
+    display: inline-block;
+    padding-left: 0.3em;
+    color: #666;
+    vertical-align: middle;
+    font-size: 0.875em;
+}
+
+/* Block help for forms */
+.pure-form-message {
+    display: block;
+    color: #666;
+    font-size: 0.875em;
+}
+
+@media only screen and (max-width : 480px) {
+    .pure-form button[type="submit"] {
+        margin: 0.7em 0 0;
+    }
+
+    .pure-form input:not([type]),
+    .pure-form input[type="text"],
+    .pure-form input[type="password"],
+    .pure-form input[type="email"],
+    .pure-form input[type="url"],
+    .pure-form input[type="date"],
+    .pure-form input[type="month"],
+    .pure-form input[type="time"],
+    .pure-form input[type="datetime"],
+    .pure-form input[type="datetime-local"],
+    .pure-form input[type="week"],
+    .pure-form input[type="number"],
+    .pure-form input[type="search"],
+    .pure-form input[type="tel"],
+    .pure-form input[type="color"],
+    .pure-form label {
+        margin-bottom: 0.3em;
+        display: block;
+    }
+
+    .pure-group input:not([type]),
+    .pure-group input[type="text"],
+    .pure-group input[type="password"],
+    .pure-group input[type="email"],
+    .pure-group input[type="url"],
+    .pure-group input[type="date"],
+    .pure-group input[type="month"],
+    .pure-group input[type="time"],
+    .pure-group input[type="datetime"],
+    .pure-group input[type="datetime-local"],
+    .pure-group input[type="week"],
+    .pure-group input[type="number"],
+    .pure-group input[type="search"],
+    .pure-group input[type="tel"],
+    .pure-group input[type="color"] {
+        margin-bottom: 0;
+    }
+
+    .pure-form-aligned .pure-control-group label {
+        margin-bottom: 0.3em;
+        text-align: left;
+        display: block;
+        width: 100%;
+    }
+
+    .pure-form-aligned .pure-controls {
+        margin: 1.5em 0 0 0;
+    }
+
+    /* NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
+    .pure-form .pure-help-inline,
+    .pure-form-message-inline,
+    .pure-form-message {
+        display: block;
+        font-size: 0.75em;
+        /* Increased bottom padding to make it group with its related input element. */
+        padding: 0.2em 0 0.8em;
+    }
+}
+
+
+
+
+/* pure end */
+
+
+
+/*  以下layout */
+
+
+body{
+  font-family: "微軟正黑體";
+}
+
+a{
+  text-decoration: none;
+}
+
+.wrap{
+  max-width: 1024px;
+  margin: 0 auto;
+  background: #EFE9E7;
+}
+
+.header{
+  position: relative;
+  height: 420px;
+  background-image: url("https://upload.cc/i1/2020/04/14/y60aZu.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+.header .topmenu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1em;
+  background: rgba(0,0,0,0.5);
+}
+
+.topmenu .menu{
+  display: flex;
+}
+
+
+
+.topmenu .menu a{
+  display: block;
+  color: white;
+  padding: 1em 2em;
+  transition: 0.3s;
+}
+
+.topmenu .menu a:hover{
+  color:black;
+  background: gray;
+}
+
+
+
+.topmenu .mobile-menu{
+  position: relative;
+  display: none;
+  border: 2px solid white;
+  padding:1em;
+  height: 32px;
+  width: 32px;
+}
+
+@media(max-width:480px){
+  .header{
+    background-image: url("https://upload.cc/i1/2020/04/15/WugfTS.png");
+  }
+
+  .header .topmenu{
+    padding: .5em;
+  }
+
+  .topmenu .menu{
+    display: block;
+    position: absolute;
+    max-height: 0;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    top:52px;
+    transition:  max-height 2s;
+  }
+
+  .topmenu.menu-show .menu{
+    max-height: 500px;
+  }
+
+  .topmenu .menu a{
+    color: white;
+    background: rgba(0,0,0,0.5);
+  }
+
+  .topmenu .mobile-menu{
+    display: block;
+  }
+
+  
+}
+
+.topmenu .mobile-menu span{
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 20px;
+  height: 3px;
+  border-radius: 5px;
+  background: white;
+  transition: all 0.3s;
+}
+
+.topmenu .mobile-menu span:first-child{
+  -webkit-transform: translateY(-7px);
+  transform: translateY(-7px);
+}
+
+.topmenu .mobile-menu span:last-child{
+  -webkit-transform: translateY(7px);
+  transform: translateY(7px);
+}
+
+.topmenu.menu-show .mobile-menu span:first-child{
+  -webkit-transform: rotate(-220deg);
+  transform: rotate(-220deg);
+}
+
+.topmenu.menu-show .mobile-menu span:nth-child(2){
+  opacity: 0;
+}
+
+.topmenu.menu-show .mobile-menu span:last-child{
+  -webkit-transform: rotate(220deg);
+  transform: rotate(220deg);
+}
+
+.topmenu .logo{
+  display: flex;
+  align-items: center;
+}
+
+.topmenu .logo a{
+  display: block;
+  width: 120px;
+  height: 24px;
+  background-image: url(../img/logo_w\(null\).svg);
+  background-repeat: no-repeat;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+  
+}
+
+
+
+.header .bannerContent{
+  position: absolute;
+  width:450px;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 1em;
+  display: block;
+  color: white;
+  background:  rgba(74,74,74,0.5);
+  line-height: 1.5;
+  text-align: center;
+}
+
+
+
+
+.header .bannerContent h2 br{
+  display: none;
+}
+
+.header .bannerContent h2{
+  font-size: 36px;
+  font-weight: bold;
+  padding-bottom: 0.5em;
+}
+
+
+@media(max-width:480px){
+  .header .bannerContent{
+    width: 100%;
+  }
+
+  .header .bannerContent h2 br{
+    display: block;
+  }
+}
+
+
+
+@media(max-width:340px){
+  .header .bannerContent h2{
+    font-size: 30px;
+  }
+}
+
+.header .bannerContent p{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+.content{
+  color: #3D1101;
+}
+
+
+.footer{
+  display: flex;
+  align-items: center;
+  padding: 3em 2em;
+}
+
+.footer .info{
+  display: flex;
+  width: 55%;
+}
+
+.footer .info,
+.footer .info > div{
+  margin-right: 3%;
+}
+
+.footer .socialMedia{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 42%;
+}
+
+
+
+
+@media(max-width:760px){
+  .footer .info{
+    display: block;
+    margin-right: 5%;
+    width: 50%;
+  }
+
+  .footer .socialMedia{
+    width: 45%;
+  }
+
+  .footer .info > div{
+    margin-bottom: 1.5em;
+    margin-right: 0;
+  }
+}
+
+
+@media(max-width:640px){
+  .footer{
+    display: block;
+  }
+
+  .footer .info,
+  .footer .socialMedia{
+    width: 100%;
+  }
+
+  .footer .socialMedia{
+    align-items: center;
+  }
+
+  
+}
+
+
+
+
+.footer .about h3, 
+.footer .contact h3{
+  font-size: 24px;
+  padding-bottom: 1em;
+  color: #3D1101;
+}
+
+.footer .about p, 
+.footer .contact p{
+  font-size: 16px;
+  color: #3D1101;
+}
+
+.footer .contact ul{
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.footer .contact li{
+  margin-bottom: 0.25em;
+}
+
+
+.footer .socialMedia .logo{
+  margin-bottom: 1em;
+}
+
+
+
+.footer .socialMedia .logo a{
+  display: block;
+  width: 243px;
+  height: 48px;
+  background-image: url(../img/logo_l\(null\).svg);
+  background-repeat: no-repeat;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.footer .socialMedia .logo a:hover{
+  opacity: 0.7;
+}
+
+.footer .socialMedia .link{
+  display: flex;
+}
+
+.footer .socialMedia .link a{
+  padding: 0.25em;
+}
+
+.footer .socialMedia .link a:hover{
+  opacity: 0.7;
+}
+
+.socialMedia .link li:first-child a{
+  color: #DB4437;
+}
+
+.socialMedia .link li:nth-child(2) a{
+  color: #41ABE1;
+}
+
+.socialMedia .link li:last-child a{
+  color: #3A5795;
+}
+
+
+/*  以上layout */
+
+/* 以下login及partial register */
+
+
+
+.content.login_register h2{
+  font-size: 48px;
+  font-weight: bolder;
+  text-align: center;
+  padding-top: 1em;
+}
+
+.content.login_register h2 span{
+  display: block;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.form-div{
+  margin: 1em auto;
+  border-radius: 2px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  border-top: 3px solid #317F36;
+  padding: 1em;
+}
+
+.form-div.login{
+  max-width: 400px;
+ 
+}
+
+
+.content.login_register h2,
+.content.login_register h2 span,
+.form-div h3{
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+
+.form-div h3{
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+
+.form-div .pure-form-stacked .input-div{
+  margin-bottom: 1em;
+}
+
+.form-div .pure-form-stacked .input-text{
+  width: 100%;
+  text-indent: 20px;
+}
+
+.form-div .pure-form-stacked .email,
+.form-div .pure-form-stacked .password{
+  position: relative;
+}
+
+.form-div .pure-form-stacked .email:before{
+  position: absolute;
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900; 
+  content: "\f0e0";
+  left: 7px;
+  top:50%;
+  transform: translateY(-50%);
+  opacity: 0.7;
+}
+
+.form-div .pure-form-stacked .password:before{
+  position: absolute;
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900; 
+  content: "\f023";
+  left: 7px;
+  top:50%;
+  transform: translateY(-50%);
+  opacity: 0.7;
+}
+
+.form-div .pure-form-stacked .forget_pwd{
+  display: block;
+  color: #FF5E45;
+
+}
+
+.form-div .pure-form-stacked .forget_pwd:hover{
+  opacity: 0.7;
+}
+
+
+.form-div .pure-form-stacked .btn.login_register{
+  background-color: #8f8a8f;
+  width: 48%;
+}
+
+.form-div .pure-form-stacked .btn.login{
+  background-color: #f4601d;
+  width: 48%;
+}
+
+@media(max-width : 480px) {
+  .form-div .pure-form-stacked .btn.login_register,
+  .form-div .pure-form-stacked .btn.login{
+    width: 100%;
+    margin: 0.7em 0 0;
+  }
+
+  .form-div h3{
+    font-size: 18px;
+    
+  }
+
+  .form-div .title{
+    font-size: 25px;
+    
+  }
+
+  .form-div .title span{
+    font-size: 16px;
+  }
+ 
+} 
+
+
+@media(max-width : 320px) {
+
+  .content.login_register h2{
+    font-size: 36px;
+    
+  }
+
+  .content.login_register h2 span{
+    font-size: 16px;
+    
+  }
+
+  .form-div h3{
+    font-size: 14px;
+  }
+ 
+} 
+
+
+/* 以上login及partial register */
+
+
+
+
+/* 以下reminding register */
+
+.form-div.register{
+  max-width: 700px;
+}
+
+
+.form-div .pure-form-stacked .btn.register{
+  background: #F56C23;
+  border-radius: 3px;
+  width:100%;
+}
+
+.form-div .form-group{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0.5em;
+}
+
+.form-div .form-group p{
+  width: 45%;
+  /*margin: 1%; */
+  margin: 1em;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #3D1101;
+}
+
+.form-div .form-group .pure-form-stacked{
+  width: 45%;
+  /*margin: 1%; */
+  margin: 1em;
+}
+
+@media(max-width:480px){
+  .form-div .form-group{
+    display: block;
+  }
+
+  .form-div .form-group p,
+  .form-div .form-group .pure-form-stacked{
+    width: 100%;
+    margin: 1em 0;
+  }
+  
+ 
+  
+}
+
+/* 以上reminding register */
+
+
+
+/* 以下index */
+
+.content.index .why_Delicious,
+.content.index .opinion,
+.content.index .booking{
+  padding: 2em;
+}
+
+
+
+
+.why_Delicious .title{
+  text-align: center;
+}
+
+.why_Delicious .title h3:before{
+  left:1%;
+}
+
+.why_Delicious .title h3:after{
+  right:1%;
+}
+
+.why_Delicious .title h3:before,
+.why_Delicious .title h3:after{
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 20%;
+  background: #979797;
+  top:50%;
+}
+
+.why_Delicious .title h3{
+  position: relative;
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 20px;
+  line-height: 1.5;
+  
+}
+
+
+.why_Delicious ul{
+  display: flex;
+  justify-content: space-around;
+  margin: 2em 0;
+}
+
+.why_Delicious li{
+  width: 30%;
+}
+
+.why_Delicious li img{
+  display: block;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.why_Delicious li img,
+.why_Delicious li h4,
+.why_Delicious ul p{
+  padding: 0.75em;
+}
+
+.why_Delicious li h4{
+  text-align: center;
+  font-size: 18px;
+}
+
+.why_Delicious ul p{
+  line-height: 1.4;
+
+}
+
+@media(max-width:768px){
+  .why_Delicious ul{
+    display: block;
+  }
+
+  .why_Delicious li{
+    width: 100%;
+    margin: 1em 0;
+  }
+
+  .why_Delicious li:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #979797;
+    margin: 1em 0;
+  }
+}
+
+@media(max-width:480px){
+  .why_Delicious .title h3:before,
+  .why_Delicious .title h3:after{
+    display: none;
+  }
+}
+
+
+.why_Delicious .title h3 span{
+  display: block;
+}
+
+
+.main_chef{
+  background: #3D1101;
+  display: flex;
+  justify-content: space-around;
+}
+
+.main_chef img{
+  width: 45%;
+}
+
+.main_chef .chef_intro{
+  width: 45%;
+  padding: 3em 0;
+}
+
+@media(max-width:768px){
+  .main_chef{
+    display: block;
+  }
+
+  .main_chef img,
+  .main_chef .chef_intro{
+    width: 100%;
+  }
+}
+
+.main_chef .chef{
+  font-size: 20px;
+}
+
+.main_chef h4,
+.main_chef p{
+  color: white;
+  line-height: 1.5;
+}
+
+.main_chef p{
+  padding: .5em 0;
+}
+
+.opinion h3{
+  font-size: 24px;
+  text-align: center;
+}
+
+.opinion ul{
+  display: flex;
+  margin-top: 2em;
+}
+
+.opinion li{
+  display: flex;
+  align-items: flex-start;
+  width: 33%;
+}
+
+.opinion li img{
+  border-radius: 50%;;
+}
+
+
+
+.opinion .opinion_content{
+  padding: 1em;
+}
+
+.opinion .opinion_content h4,
+.opinion .opinion_content p,
+.opinion .opinion_content span
+{
+  padding: 0.5em 0;
+}
+
+.opinion .opinion_content h4{
+  font-size: 18px;
+}
+
+.opinion .opinion_content p
+{
+  line-height: 1.5;
+}
+
+.opinion .opinion_content span{
+  display: block;
+  text-align: right;
+  color: #7E5F55;
+}
+
+
+@media(max-width:768px){
+  .opinion ul{
+    display: block;
+  }
+
+  .opinion li{
+    width: 100%;
+  }
+  
+}
+
+.form-div.booking{
+  margin: 0;
+}
+
+
+.booking .booking_content{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 2em;
+}
+
+.booking .booking_content img,
+.booking .form-div.booking
+{
+  width: 49%;
+}
+
+
+
+.booking h3{
+  font-size: 24px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.booking h3 span{
+  display: block;
+}
+
+.booking .form-div.booking .pure-form-stacked .input-text{
+  text-indent: 0px;
+}
+
+.booking .form-div.booking .pure-form-stacked .cancel,
+.booking .form-div.booking .pure-form-stacked .submit{
+  margin-top: 2em;
+  width: 48%;
+}
+
+@media(max-width:768px){
+  .booking .booking_content{
+    display: block;
+  }
+
+  .booking .booking_content img,
+  .booking .form-div.booking
+  {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+}
+
+
+@media(max-width:480px){
+  .booking .form-div.booking .pure-form-stacked .cancel,
+  .booking .form-div.booking .pure-form-stacked .submit{
+    width: 100%;
+    margin:0.7em 0 0;
+  }
+}
+
+
+
+
+
+
+
+
+/* 以上index */
+
+
+
+/* 以下cart */
+
+.content.cart {
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content.cart .menu{
+  width: 25%;
+}
+
+.content.cart .menu h3{
+  font-size: 20px;
+}
+
+.content.cart .menu ul{
+  margin-top: 1em;
+}
+
+
+
+.content.cart .menu li a{
+  display: block;
+  color: #3D1101;
+  padding: 1em;
+  border-bottom: 1px solid #3D1101;
+}
+
+
+.content.cart .menu li a:hover{
+  display: block;
+  background: #3D1101;
+  color: #EFE9E7;
+  padding: 1em;
+}
+
+.content.cart .main{
+  width: 70%;
+}
+
+.content.cart .main .search_pay{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content.cart .main .search_pay .payment{
+  width: 35%;
+}
+
+
+.content.cart .main .search_pay .form-search{
+  position: relative;
+  width: 55%;
+  outline: none;
+  border: 2px solid #3D1101;
+  border-radius: 5px;;
+}
+
+
+@media(max-width:640px){
+  .content.cart {
+    display: block;
+  }
+
+  .content.cart .menu,
+  .content.cart .main{
+    width: 100%;
+    width: 100%;
+  }
+
+  .content.cart .main{
+    margin-top: 2em;
+  }
+
+  .content.cart .main .search_pay{
+    display: block;
+  }
+  
+  .content.cart .main .search_pay .payment,
+  .content.cart .main .search_pay .form-search{
+    width: 100%;
+    margin-top: 1em;
+  }
+  
+
+}
+
+
+
+.content.cart .main .form-search .input-search{
+  width: 100%;
+} 
+
+
+.content.cart .main .form-search button[type="submit"]{
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translate(-50%, -50% );
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+
+@media(max-width:480px){
+  .content.cart .main .form-search .input-search,
+  .content.cart .main .form-search button[type="submit"]{
+    margin: 0;
+  } 
+
+
+}
+
+.content.cart .main .payment{
+  text-align: right;
+}
+
+.content.cart .main .payment a{
+  position: relative;
+  color: #3D1101;
+  font-size: 20px;
+  margin: 0 0.5em;
+}
+
+.content.cart .main .payment a:first-child:after{
+  content: "";
+  display: block;
+  position: absolute;
+  right: -10px;
+  top:3px;
+  width: 1px;
+  height: 25px;
+  background: #3D1101;
+}
+
+
+.content.cart .main .order_list{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.content.cart .main li{
+  position: relative;
+  text-align: center;
+  width: 32%;
+  margin-top: 2em;
+  border-radius: 5px;
+  box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+}
+
+@media(max-width:860px){
+  .content.cart .main li{
+    width: 49%;
+  }
+}
+
+@media(max-width:640px){
+  .content.cart .main .order_list{
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .content.cart .main li{
+    width: 100%;
+  }
+  
+  
+
+}
+
+@media(max-width:360px){
+  .content.cart .main .order_list{
+    width: 250px;
+  }
+  
+}
+
+
+.content.cart .main li .productImg{
+  display: block;
+}
+
+.content.cart .main li .heart{
+  display: block;
+}
+
+.content.cart .main .heart i{
+  position: absolute;
+  left: 6px;
+  top:6px;
+  color: white;
+  z-index: 100;
+}
+
+.content.cart .main li a:hover{
+  opacity: 0.7;
+}
+
+.content.cart .main li img{
+  border-radius: 5px;
+}
+
+.content.cart .main h3{
+  font-size: 20px;
+  line-height: 1.3;
+  padding: 0.5em;
+}
+
+.content.cart .main h3 span{
+  display: block;
+  font-size: 12px;
+}
+
+.content.cart .main li > span{
+  display: inline-block;
+  font-size: 20px;
+  border-top: 1px solid #3D1101;
+  padding: 1em;
+}
+
+.content.cart .main .order_list .add{
+  display: block;
+  border: 2px solid #FF5E45;
+  border-radius: 3px;
+  color:  #FF5E45;
+  padding: 0.5em 1em;
+
+}
+
+
+
+
+
+/* 以上cart */
